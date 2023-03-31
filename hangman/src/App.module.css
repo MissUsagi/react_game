@@ -1,0 +1,14 @@
+.container {
+   max-width: "800px";
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   margin: 0 auto;
+}
+
+.endgameTxt {
+   font-size: 2rem;
+   text-align: center;
+}

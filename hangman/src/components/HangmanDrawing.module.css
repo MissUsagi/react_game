@@ -1,0 +1,99 @@
+:root {
+   --lineThickness: 10px;
+   --headSize: 50px;
+   --baseColor: black;
+}
+
+.hangmanContainer {
+   position: relative;
+}
+
+.bottomLine {
+   background-color: var(--baseColor);
+   height: var(--lineThickness);
+   width: 250px;
+}
+
+.verticalLine {
+   background-color: var(--baseColor);
+   height: 400px;
+   width: var(--lineThickness);
+   margin-left: calc((250px - var(--lineThickness))/2);
+}
+
+.topHorizontalLine {
+   background-color: var(--baseColor);
+   height: var(--lineThickness);
+   width: 200px;
+   margin-left: calc((250px - var(--lineThickness))/2);
+}
+
+.topVerticalLine {
+   position: absolute;
+   background-color: var(--baseColor);
+   height: var(--headSize);
+   width: var(--lineThickness);
+   top: 0;
+   right: 0;
+}
+
+.head {
+   width: var(--headSize);
+   height: var(--headSize);
+   border-radius: 50%;
+   border: var(--lineThickness) solid var(--baseColor);
+   position: absolute;
+   top: var(--headSize);
+   right: calc(-1 * (var(--headSize) / 2 + var(--lineThickness) / 2));
+}
+
+.body {
+   width: var(--lineThickness);
+   height: 100px;
+   background: var(--baseColor);
+   position: absolute;
+   top: 120px;
+   right: 0;
+}
+
+.leftArm {
+   position: absolute;
+   width: 100px;
+   height: var(--lineThickness);
+   background-color: var(--baseColor);
+   top: 150px;
+   right: 0;
+   rotate: 15deg;
+}
+
+.rightArm {
+   position: absolute;
+   width: 100px;
+   height: var(--lineThickness);
+   background-color: var(--baseColor);
+   top: 150px;
+   right: calc(-1 * (100px - var(--lineThickness)));
+   rotate: 345deg;
+}
+
+.rightLeg {
+   position: absolute;
+   width: 100px;
+   height: var(--lineThickness);
+   background-color: var(--baseColor);
+   top: 205px;
+   right: calc(-1 * (100px - var(--lineThickness)));
+   rotate: 60deg;
+   transform-origin: left bottom;
+}
+
+.leftLeg {
+   position: absolute;
+   width: 100px;
+   height: var(--lineThickness);
+   background-color: var(--baseColor);
+   top: 205px;
+   right: 0px;
+   rotate: -60deg;
+   transform-origin: right bottom;
+}
