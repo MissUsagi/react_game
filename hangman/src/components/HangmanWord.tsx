@@ -1,15 +1,24 @@
 import classes from "./HangmanWord.module.css";
-const word = "test";
-const wordSplit = word.split("");
-const guessedLetters = ["t", "e"];
-const HangmanWord = (props: any) => {
+
+type HangmanWordProps = {
+  guessedLetters: string[];
+  wordToGuess: string;
+  reveal?: boolean;
+};
+const HangmanWord = ({
+  guessedLetters,
+  wordToGuess,
+  reveal = false,
+}: HangmanWordProps) => {
   return (
     <div className={classes.wordContainer}>
-      {wordSplit.map((char, index) => (
+      {wordToGuess.split("").map((char, index) => (
         <span className={classes.charContainer} key={index}>
           <span
             style={{
-              visibility: guessedLetters.includes(char) ? "visible" : "hidden",
+              visibility:
+                guessedLetters.includes(char) || reveal ? "visible" : "hidden",
+              color: !guessedLetters.includes(char) && reveal ? "red" : "black",
             }}>
             {char}
           </span>

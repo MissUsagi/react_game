@@ -11,4 +11,5 @@
 .endgameTxt {
    font-size: 2rem;
    text-align: center;
+   min-height: 2.2rem;
 }

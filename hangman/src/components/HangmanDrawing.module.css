@@ -58,7 +58,7 @@
 
 .leftArm {
    position: absolute;
-   width: 100px;
+   width: 90px;
    height: var(--lineThickness);
    background-color: var(--baseColor);
    top: 150px;
@@ -68,11 +68,11 @@
 
 .rightArm {
    position: absolute;
-   width: 100px;
+   width: 90px;
    height: var(--lineThickness);
    background-color: var(--baseColor);
    top: 150px;
-   right: calc(-1 * (100px - var(--lineThickness)));
+   right: calc(-1 * (90px - var(--lineThickness)));
    rotate: 345deg;
 }
 

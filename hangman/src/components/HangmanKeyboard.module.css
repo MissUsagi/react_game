@@ -1,5 +1,5 @@
 .keyContainer {
-   margin: 1rem 400px 0;
+   margin: 0.2rem 450px 0;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
    gap: .5rem;
@@ -19,12 +19,13 @@
    box-shadow: 3px 3px black;
 }
 
-.key:hover {
+.key:hover:not(:disabled),
+.key:focus:not(:disabled) {
    background-color: aquamarine;
 }
 
 .key.active {
-   background-color: teal;
+   background-color: rgb(6, 59, 94);
    color: white;
 }
 
